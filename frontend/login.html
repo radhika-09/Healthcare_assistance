@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Healthcare Assistance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav>
+  <h2>Healthcare Assistance</h2>
+
+  <a href="index.html">Home</a>
+  <a href="dashboard.html" class="auth-link">Dashboard</a>
+  <a href="doctors.html">Doctors</a>
+  <a href="chatbot.html">Chatbot</a>
+  <a href="profile.html" class="auth-link">Profile</a>
+
+  <a href="admin-appointments.html" class="doctor-admin-link">Manage Appointments</a>
+  <a href="add-doctor.html" class="admin-link">Add Doctor</a>
+  <a href="manage-doctors.html" class="admin-link">Manage Doctors</a>
+
+  <a href="login.html" class="guest-link">Login</a>
+  <a href="signup.html" class="guest-link">Signup</a>
+
+  <button type="button" id="navLogoutBtn" class="auth-link">Logout</button>
+
+</nav>
+
+  <main class="auth-page">
+    <form id="loginForm" class="auth-form">
+      <h1>Login</h1>
+
+      <input type="email" id="loginEmail" placeholder="Email address" required />
+
+      <input type="password" id="loginPassword" placeholder="Password" required />
+
+      <button type="submit">Login</button>
+
+      <p id="loginMessage" class="form-message"></p>
+
+      <p>
+        Don’t have an account?
+        <a href="signup.html">Create account</a>
+      </p>
+    </form>
+  </main>
+
+  <script src="js/auth.js"></script>
+  <script src="js/nav.js"></script>
+
+</body>
+</html>

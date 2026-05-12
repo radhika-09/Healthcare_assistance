@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthcare Assistance Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav>
+    <h2>Healthcare Assistance</h2>
+
+    <a href="index.html">Home</a>
+    <a href="dashboard.html" class="auth-link">Dashboard</a>
+    <a href="doctors.html">Doctors</a>
+    <a href="chatbot.html">Chatbot</a>
+    <a href="profile.html" class="auth-link">Profile</a>
+
+    <a href="admin-appointments.html" class="doctor-admin-link">Manage Appointments</a>
+    <a href="add-doctor.html" class="admin-link">Add Doctor</a>
+    <a href="manage-doctors.html" class="admin-link">Manage Doctors</a>
+
+    <a href="login.html" class="guest-link">Login</a>
+    <a href="signup.html" class="guest-link">Signup</a>
+
+    <button type="button" id="navLogoutBtn" class="auth-link">Logout</button>
+  </nav>
+
+  <main class="home-page">
+    <section class="home-hero">
+      <div>
+        <h1>Healthcare Assistance Platform</h1>
+        <p>
+          Find doctors, book appointments, manage your healthcare profile,
+          and get AI-powered general health guidance from one simple platform.
+        </p>
+
+        <div class="home-actions">
+          <a href="doctors.html" class="primary-link">Find Doctors</a>
+          <a href="chatbot.html" class="secondary-link">Open Chatbot</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-features">
+      <article>
+        <h2>AI Health Chatbot</h2>
+        <p>
+          Ask basic health questions and receive general AI-generated guidance
+          with safety reminders.
+        </p>
+      </article>
+
+      <article>
+        <h2>Doctor Search</h2>
+        <p>
+          Browse doctors by specialty, location, and availability before
+          booking an appointment.
+        </p>
+      </article>
+
+      <article>
+        <h2>Appointment Booking</h2>
+        <p>
+          Patients can book appointments, view status, and cancel appointments
+          when needed.
+        </p>
+      </article>
+
+      <article>
+        <h2>Role-Based Dashboard</h2>
+        <p>
+          Patients, doctors, and admins get different tools based on their role.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <script src="js/nav.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Doctor | Healthcare Assistance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav>
+  <h2>Healthcare Assistance</h2>
+
+  <a href="index.html">Home</a>
+  <a href="dashboard.html" class="auth-link">Dashboard</a>
+  <a href="doctors.html">Doctors</a>
+  <a href="chatbot.html">Chatbot</a>
+  <a href="profile.html" class="auth-link">Profile</a>
+
+  <a href="admin-appointments.html" class="doctor-admin-link">Manage Appointments</a>
+  <a href="add-doctor.html" class="admin-link">Add Doctor</a>
+  <a href="manage-doctors.html" class="admin-link">Manage Doctors</a>
+
+  <a href="login.html" class="guest-link">Login</a>
+  <a href="signup.html" class="guest-link">Signup</a>
+
+  <button type="button" id="navLogoutBtn" class="auth-link">Logout</button>
+
+</nav>
+
+  <main class="add-doctor-page">
+    <form id="addDoctorForm" class="doctor-form">
+      <h1>Add Doctor</h1>
+
+      <input type="text" id="doctorName" placeholder="Doctor name" required />
+
+      <input type="text" id="doctorSpecialty" placeholder="Specialty" required />
+
+      <input type="number" id="doctorExperience" placeholder="Experience in years" required />
+
+      <input type="text" id="doctorLocation" placeholder="Location" required />
+
+      <input type="text" id="doctorPhone" placeholder="Phone number" />
+
+      <input type="email" id="doctorEmail" placeholder="Email address" />
+
+      <label class="checkbox-label">
+        <input type="checkbox" id="doctorAvailable" checked />
+        Available
+      </label>
+
+      <button type="submit">Add Doctor</button>
+
+      <p id="addDoctorMessage" class="form-message"></p>
+    </form>
+  </main>
+
+  <script src="js/addDoctor.js"></script>
+  <script src="js/nav.js"></script>
+
+</body>
+</html>

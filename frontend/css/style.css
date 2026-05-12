@@ -1,0 +1,519 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --surface-soft: #eef7f6;
+  --text: #101828;
+  --muted: #667085;
+  --border: #e4e7ec;
+  --primary: #0f766e;
+  --primary-dark: #115e59;
+  --primary-soft: #ccfbf1;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --shadow: 0 16px 40px rgba(16, 24, 40, 0.08);
+  --radius: 14px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Inter, Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.5;
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 32%),
+    var(--bg);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 16px;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+button:disabled,
+.book-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: white;
+  color: var(--text);
+  outline: none;
+  transition: 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.12);
+}
+
+textarea {
+  resize: vertical;
+}
+
+main {
+  width: min(1120px, 92%);
+  margin: 40px auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Navbar */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 14px 5%;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(228, 231, 236, 0.85);
+}
+
+nav h2 {
+  margin-right: auto;
+  font-size: 20px;
+  color: var(--primary-dark);
+}
+
+nav a,
+nav button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 9px 11px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+nav a:hover,
+nav button:hover {
+  color: var(--primary-dark);
+  background: var(--surface-soft);
+  transform: none;
+}
+
+#navLogoutBtn,
+#logoutBtn {
+  color: var(--danger);
+}
+
+/* Messages */
+
+.form-message {
+  min-height: 22px;
+  color: var(--danger);
+}
+
+.form-message.error {
+  color: var(--danger);
+}
+
+.form-message.success {
+  color: var(--success);
+}
+
+/* Homepage */
+
+.home-page {
+  width: min(1180px, 92%);
+}
+
+.home-hero {
+  min-height: 520px;
+  display: grid;
+  align-items: center;
+  padding: 72px 48px;
+  border-radius: 28px;
+  background:
+    linear-gradient(120deg, rgba(15, 118, 110, 0.94), rgba(20, 184, 166, 0.78)),
+    url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.home-hero h1 {
+  max-width: 720px;
+  font-size: clamp(42px, 7vw, 78px);
+  line-height: 0.98;
+  letter-spacing: 0;
+  margin-bottom: 22px;
+}
+
+.home-hero p {
+  max-width: 650px;
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.home-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.primary-link,
+.secondary-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.primary-link {
+  background: white;
+  color: var(--primary-dark);
+}
+
+.secondary-link {
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+}
+
+.home-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.home-features article {
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.04);
+}
+
+.home-features h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.home-features p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Forms and Cards */
+
+.auth-page,
+.appointment-page,
+.add-doctor-page,
+.profile-page {
+  width: min(620px, 92%);
+}
+
+.dashboard-page {
+  display: grid;
+  gap: 20px;
+}
+
+.auth-form,
+.appointment-form,
+.doctor-form,
+.profile-form,
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.auth-form,
+.appointment-form,
+.doctor-form,
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-form h1,
+.appointment-form h1,
+.doctor-form h1,
+.profile-form h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--muted);
+}
+
+.checkbox-label input {
+  width: auto;
+}
+
+.dashboard-page h1,
+.doctors-page h1,
+.admin-appointments-page h1,
+.manage-doctors-page h1,
+.chatbot-page h1 {
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.dashboard-card {
+  display: grid;
+  gap: 10px;
+}
+
+.dashboard-card h2 {
+  font-size: 22px;
+}
+
+.dashboard-card p {
+  color: var(--muted);
+}
+
+.dashboard-card a {
+  display: inline-flex;
+  width: fit-content;
+  padding: 10px 14px;
+  margin: 4px 8px 4px 0;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--primary-dark);
+  background: var(--primary-soft);
+  font-weight: 700;
+}
+
+/* Doctors */
+
+.doctors-page,
+.admin-appointments-page,
+.manage-doctors-page {
+  width: min(1180px, 92%);
+}
+
+.doctor-filters {
+  display: grid;
+  grid-template-columns: 1fr 180px 180px auto auto;
+  gap: 10px;
+  align-items: center;
+  margin: 22px 0;
+}
+
+.doctors-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.doctor-card,
+.appointment-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: 0 8px 26px rgba(16, 24, 40, 0.05);
+}
+
+.doctor-card h2,
+.appointment-card h3 {
+  margin-bottom: 10px;
+  color: var(--primary-dark);
+}
+
+.doctor-card p,
+.appointment-card p {
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.book-btn,
+.cancel-appointment-btn {
+  margin-top: 12px;
+}
+
+/* Appointments */
+
+.appointments-list,
+.manage-doctors-list {
+  display: grid;
+  gap: 16px;
+}
+
+.status-select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+}
+
+/* Chatbot */
+
+.chatbot-page {
+  width: min(820px, 92%);
+}
+
+.chat-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.chat-box {
+  height: 520px;
+  overflow-y: auto;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(238, 247, 246, 0.9), rgba(255, 255, 255, 0.96));
+  box-shadow: var(--shadow);
+  margin-bottom: 14px;
+}
+
+.user-message,
+.bot-message {
+  width: fit-content;
+  max-width: 78%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border-radius: 16px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.user-message {
+  margin-left: auto;
+  background: var(--primary);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.bot-message {
+  margin-right: auto;
+  background: white;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-bottom-left-radius: 4px;
+}
+
+.chat-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+/* Manage Doctors */
+
+.edit-doctor-form {
+  display: grid;
+  gap: 10px;
+}
+
+.delete-doctor-btn {
+  background: var(--danger);
+}
+
+.delete-doctor-btn:hover {
+  background: #991b1b;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  .home-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .doctor-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero {
+    min-height: 460px;
+    padding: 48px 24px;
+  }
+}
+
+@media (max-width: 620px) {
+  nav {
+    padding: 12px 4%;
+  }
+
+  nav h2 {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  main {
+    margin: 24px auto;
+  }
+
+  .home-features {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-form {
+    grid-template-columns: 1fr;
+  }
+
+  .user-message,
+  .bot-message {
+    max-width: 92%;
+  }
+
+  .home-hero h1 {
+    font-size: 42px;
+  }
+}
