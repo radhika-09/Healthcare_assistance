@@ -145,27 +145,6 @@ Handles:
 
 ---
 
-# 📸 Screenshots
-
-Add screenshots in a folder named **screenshots** and update paths if needed.
-
-### 🏠 Home Page
-<img src="screenshots/home.png" width="800">
-
-### 🔐 Login Page
-<img src="screenshots/login.png" width="800">
-
-### 👨‍⚕️ Doctors Page
-<img src="screenshots/doctors.png" width="800">
-
-### 📅 Appointments
-<img src="screenshots/appointments.png" width="800">
-
-### 🤖 AI Chatbot
-<img src="screenshots/chatbot.png" width="800">
-
----
-
 # 🎨 UI Highlights
 - Mobile-friendly layout
 - Healthcare-style theme
